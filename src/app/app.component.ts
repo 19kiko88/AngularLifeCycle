@@ -5,7 +5,7 @@ import { AfterContentInit, Component, OnInit, OnChanges, DoCheck, AfterViewInit 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnChanges, OnInit, /*DoCheck,*/ AfterContentInit, AfterViewInit {
+export class AppComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterViewInit {
 
 
   constructor(){
@@ -20,9 +20,9 @@ export class AppComponent implements OnChanges, OnInit, /*DoCheck,*/ AfterConten
     console.log('AppComponent.ngOnInit');  
   }
 
-  // ngDoCheck(): void {
-  //   console.log('AppComponent.ngDoCheck');
-  // }
+  ngDoCheck(): void {
+    console.log('AppComponent.ngDoCheck');
+  }
 
   ngAfterContentInit(): void {
     console.log('AppComponent.ngAfterContentInit');        

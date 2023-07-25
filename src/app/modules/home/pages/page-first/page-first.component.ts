@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-page-first',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-first.component.scss']
 })
 export class PageFirstComponent {
+
+  @Input() messageFromMain: string = '';
 
   constructor(){
     console.log('PageFirstComponent.constructor');
@@ -19,9 +21,9 @@ export class PageFirstComponent {
     console.log('PageFirstComponent.ngOnInit');  
   }
 
-  // ngDoCheck(): void {
-  //   console.log('PageFirstComponent.ngDoCheck');
-  // }
+  ngDoCheck(): void {
+    console.log('PageFirstComponent.ngDoCheck');
+  }
 
   ngAfterContentInit(): void {
     console.log('PageFirstComponent.ngAfterContentInit');        

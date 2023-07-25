@@ -16,6 +16,7 @@ import { PageSecondComponent } from './pages/page-second/page-second.component';
     CommonModule, 
     BrowserAnimationsModule,
     MatTabsModule
-  ]
+  ],
+  exports:[MainComponent]
 })
 export class HomeModule { }
