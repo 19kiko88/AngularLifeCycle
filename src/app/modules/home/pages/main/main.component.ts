@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, OnChanges, OnInit, DoCheck, AfterViewInit } from '@angular/core';
+import { AfterContentInit, Component, OnChanges, OnInit, DoCheck, AfterViewInit, ContentChild } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -24,6 +24,7 @@ export class MainComponent  implements OnChanges, OnInit, DoCheck, AfterContentI
   }
 
   ngAfterContentInit(): void {
+
     console.log('MainComponent.ngAfterContentInit');        
   }
 

@@ -1,2 +1,9 @@
-<p>page-first works!</p>
-<span>message from MainComponent：{{messageFromMain}}</span>
+<ng-content select=".ngconten-label-1"></ng-content>
+
+<span>[@Input()] message from MainComponent：{{messageFromMain}}</span>
+
+<!-- <ng-content class=".ngconten-label-2"></ng-content> -->
+
+<ng-container *ngIf="displayTest == true">
+    <app-test></app-test>
+</ng-container>

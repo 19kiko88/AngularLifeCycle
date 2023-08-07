@@ -1,6 +1,17 @@
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-    <mat-tab label="First">
-      <app-page-first [messageFromMain] = '"hello page-fist"'></app-page-first>
+    <mat-tab label="First_1">
+      <app-page-first [messageFromMain] = '"hello page-first_1"' [displayTest] = 'true'>        
+        <p  #content class="ngconten-label-1">[ng-content] page-first_1 works!</p>
+
+        <!-- <app-test class=".ngconten-label-2"></app-test> -->
+
+      </app-page-first>
+    </mat-tab>
+
+    <mat-tab label="First_2">
+      <app-page-first [messageFromMain] = '"hello page-first_2"' [displayTest] = 'false'>
+        <p #content class="ngconten-label-1">[ng-content] page-first_2 works!</p>
+      </app-page-first>
     </mat-tab>
 
     <mat-tab label="Second">

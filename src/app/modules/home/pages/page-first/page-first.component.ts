@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { MainComponent } from './../main/main.component';
+import { Component, ContentChild, ContentChildren, ElementRef, Input, QueryList } from '@angular/core';
 
 @Component({
   selector: 'app-page-first',
@@ -8,7 +9,9 @@ import { Component, Input } from '@angular/core';
 export class PageFirstComponent {
 
   @Input() messageFromMain: string = '';
-
+  @Input() displayTest: boolean = false;
+  @ContentChild('content') private content:ElementRef|undefined //获取投影中的dom元素
+  
   constructor(){
     console.log('PageFirstComponent.constructor');
   }
@@ -26,7 +29,7 @@ export class PageFirstComponent {
   }
 
   ngAfterContentInit(): void {
-    console.log('PageFirstComponent.ngAfterContentInit');        
+    console.log('PageFirstComponent.ngAfterContentInit', this.content?.nativeElement.innerText);
   }
 
   ngAfterViewInit():void{
